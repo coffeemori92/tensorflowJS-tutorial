@@ -1,0 +1,22 @@
+{
+  "name": "tensorflowjs-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coffeemori92/tensorflowJS-tutorial.git"
+  },
+  "author": "coffeemori",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coffeemori92/tensorflowJS-tutorial/issues"
+  },
+  "homepage": "https://github.com/coffeemori92/tensorflowJS-tutorial#readme",
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.12.0"
+  }
+}
