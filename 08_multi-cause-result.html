@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-    <script src="./data.js"></script>
+    <script src="./data2.js"></script>
   </head>
   <body>
     <script>
@@ -15,8 +15,8 @@
       var 결과 = tf.tensor(보스톤_결과);
 
       // 2. 모델의 모양을 만듭니다.
-      var X = tf.input({ shape: [13] });
-      var Y = tf.layers.dense({ units: 1 }).apply(X);
+      var X = tf.input({ shape: [12] });
+      var Y = tf.layers.dense({ units: 2 }).apply(X);
       var model = tf.model({ inputs: X, outputs: Y });
       var compileParam = {
         optimizer: tf.train.adam(),
@@ -26,7 +26,7 @@
 
       // 3. 데이터로 모델을 학습시킵니다.
       var fitParam = {
-        epochs: 2000,
+        epochs: 100,
         callbacks: {
           onEpochEnd: function (epoch, logs) {
             console.log('epoch', epoch, logs, 'RMSE=>', Math.sqrt(logs.loss));
